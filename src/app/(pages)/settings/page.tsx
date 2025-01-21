@@ -6,12 +6,10 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
-import { usePathname } from "next/navigation";
 
-function settingPage() {
-  const pathname = usePathname();
-      const homeElement = <Text>Setting</Text>;
-      const separator = <Text>/</Text>;
+function SettingPage() { // Changed to uppercase
+  const homeElement = <Text>Setting</Text>;
+  const separator = <Text>/</Text>;
 
   return (
     <SidebarWithHeader >
@@ -34,4 +32,4 @@ function settingPage() {
     </SidebarWithHeader>
   );
 }
-export default settingPage;
+export default SettingPage;

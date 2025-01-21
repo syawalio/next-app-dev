@@ -9,10 +9,8 @@ import {
     Text,
 } from "@chakra-ui/react"; 
 import Link from 'next/link';
-import { usePathname } from "next/navigation";
 
-function homePage() {
-    const pathname = usePathname();
+function HomePage() { // Changed to uppercase
     const homeElement = <Text>Home </Text>;
     const separator = <Text> / </Text>;
 
@@ -43,4 +41,4 @@ function homePage() {
         </SidebarWithHeader>
     );
 }
-export default homePage;
+export default HomePage;
