@@ -6,7 +6,6 @@ import Simple from "@/app/components/productdetail";
 
 import { 
     Box,
-    Button,
     Text,
 } from "@chakra-ui/react"; 
 

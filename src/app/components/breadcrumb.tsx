@@ -1,8 +1,6 @@
 'use client';
 
 import { 
-    Button,
-    Text,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,

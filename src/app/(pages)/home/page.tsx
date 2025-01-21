@@ -3,19 +3,10 @@
 import SidebarWithHeader from "@/app/components/sidebar";
 import BreadcrumbComponent from "@/app/components/breadcrumb";
 import BasicStatistics from "@/app/components/statistics";
-import productPage from "./product/page";
 import { 
     Box,
     Button,
     Text,
-    Input,
-    FormControl,
-    FormLabel,
-    FormHelperText,
-    Card,
-    CardHeader,
-    CardFooter,
-    CardBody,
 } from "@chakra-ui/react"; 
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
