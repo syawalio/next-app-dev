@@ -28,6 +28,7 @@ import {
   FiMenu,
   FiBell,
   FiChevronDown,
+  FiUser
 } from 'react-icons/fi'
 import { IconType } from 'react-icons'
 import Link from 'next/link'
@@ -56,6 +57,7 @@ interface SidebarProps extends BoxProps {
 const LinkItems: Array<LinkItemProps> = [
   { name: 'Home', icon: FiHome, location: '/home' },
   { name: 'Settings', icon: FiSettings, location: '/settings' },
+  { name: 'User', icon: FiUser, location: '/user' },
 ]
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
@@ -98,7 +100,7 @@ const NavItem = ({ icon, link, children, ...rest }: NavItemProps) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: 'cyan.400',
+          bg: '#2b6cb0',
           color: 'white',
         }}
         {...rest}>

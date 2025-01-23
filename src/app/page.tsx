@@ -12,7 +12,7 @@ export default function Home() {
           width={180}
           height={38}
           priority
-        />
+        />j
         <ol>
           <li>
             Get started by editing <code>src/app/page.tsx</code>.

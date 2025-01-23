@@ -27,21 +27,19 @@ const BreadcrumbComponent = ({ homeElement, separator, containerClasses, listCla
     return (
         <Breadcrumb>
             <BreadcrumbItem className={containerClasses}>
-                <BreadcrumbLink className={listClasses}>
-                    <Link href={'/'}>
-                        {homeElement}
-                    </Link>
+                <BreadcrumbLink as={Link} href={'/'} className={listClasses}>
+                    {homeElement}
                 </BreadcrumbLink>
                 {pathNames.length > 0 && <BreadcrumbSeparator>{separator}</BreadcrumbSeparator>}
                 {
                     pathNames.map((link, index) => {
-                        const href = `/${pathNames.slice(0, index + 1).join('/')}`; // Changed to const
-                        const itemClasses = paths === href ? `${listClasses} ${activeClasses}` : listClasses; // Changed to const
-                        const itemLink = capitalizeLinks ? link[0].toUpperCase() + link.slice(1, link.length) : link; // Changed to const
+                        const href = `/${pathNames.slice(0, index + 1).join('/')}`;
+                        const itemClasses = paths === href ? `${listClasses} ${activeClasses}` : listClasses;
+                        const itemLink = capitalizeLinks ? link[0].toUpperCase() + link.slice(1, link.length) : link;
                         return (
                             <BreadcrumbItem key={index} className={containerClasses}>
-                                <BreadcrumbLink className={itemClasses}>
-                                    <Link href={href}>{itemLink}</Link>
+                                <BreadcrumbLink as={Link} href={href} className={itemClasses}>
+                                    {itemLink}
                                 </BreadcrumbLink>
                                 {index < pathNames.length - 1 && <BreadcrumbSeparator>{separator}</BreadcrumbSeparator>}
                             </BreadcrumbItem>
