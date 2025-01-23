@@ -58,6 +58,8 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Home', icon: FiHome, location: '/home' },
   { name: 'Settings', icon: FiSettings, location: '/settings' },
   { name: 'User', icon: FiUser, location: '/user' },
+  { name: 'Users Profile', icon: FiUser, location: '/users' },
+  { name: 'Users Tanstack', icon: FiUser, location: '/user-with-tanstack' },
 ]
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {

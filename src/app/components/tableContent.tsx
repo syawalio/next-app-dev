@@ -66,13 +66,13 @@ export function TableContent({ table }: { table: any }) {
     );
 };
 
-export function TableControllContent({ table }: { table: any }) {
+export function TableControllContent({ table, totalPages }: { table: any, totalPages: number }) {
     return (
-        <Flex w={"full"} justifyContent="space-between" alignItems="center" gap={4}>
+        <Flex w={"full"} justifyContent="space-between" alignItems="center" gap={4} marginTop={4}>
             <Flex gap={2} width={"auto"} justifyContent={"start"}>
                 <strong>{table.getState().pagination.pageIndex + 1}</strong>
                 <strong>of</strong>
-                <strong>{table.getPageCount()}</strong>
+                <strong>{totalPages}</strong>
             </Flex>
             <HStack spacing={4}>
                 <Button
@@ -84,7 +84,7 @@ export function TableControllContent({ table }: { table: any }) {
                 </Button>
                 <Button
                     onClick={() => table.nextPage()}
-                    disabled={!table.getCanNextPage()}
+                    disabled={!table.getCanNextPage() || table.getState().pagination.pageIndex + 1 >= totalPages}
                     rightIcon={<ChevronRightIcon />}
                 >
                     Next

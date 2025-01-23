@@ -1,16 +1,16 @@
-// app/layout.tsx
-import { Providers } from './providers'
+import Provider from './components/Provider';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode,
-}) {
-  return (
-    <html lang='en'>
-      <body>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  )
+export default function RootLayout({ 
+    children,
+ }: Readonly<{ children: React.ReactNode;
+  }>) {
+    return (
+        <html lang="en">
+        <body>
+        <Provider>
+            {children}
+        </Provider>
+        </body>
+        </html>
+    );
 }

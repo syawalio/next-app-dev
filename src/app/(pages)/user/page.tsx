@@ -95,9 +95,7 @@ function UserPage() {
         console.log('Before deletion:', dataUsers);
         console.log('Username to delete:', username);
         setDataUsers((prevDataUsers) => prevDataUsers.filter(user => user.username !== username));
-        // setDataUsers(dataUsers.filter(user => user.username !== username));
-        
-        // console.log('Updated users:', updatedUsers);
+
         setTotalData(dataUsers.length);
         
         Swal.fire({
@@ -107,7 +105,6 @@ function UserPage() {
             confirmButtonText: 'OK'
         });
         
-        // console.log('After deletion:', updatedUsers);
         console.log('User deleted:', username);
     };
 
